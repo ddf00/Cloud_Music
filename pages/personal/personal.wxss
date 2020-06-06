@@ -1,0 +1,195 @@
+.personalContainer {
+    width: 100%;
+    height: 100%;
+}
+
+/* 用户信息 */
+.personalContainer .user-section {
+    height: 520rpx;
+    position: relative;
+    padding: 100rpx 30rpx 0;
+}
+
+.user-section .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    filter: blur(1px);
+}
+
+.user-section .userInfo {
+    height: 180rpx;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.userInfo .portrait-box {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: gray;
+}
+
+.userInfo .portrait-box image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.userInfo .info-box {
+    margin-left: 20rpx;
+}
+
+/* 会员卡片 */
+
+.user-section .vip-card {
+    height: 240rpx;
+    position: relative;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    color: #f7d680;
+    padding: 20rpx 24rpx;
+    border-radius: 16rpx;
+}
+
+.vip-card .card-bg {
+    width: 380rpx;
+    height: 260rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 0;
+}
+
+.vip-card .b-btn {
+    width: 132rpx;
+    height: 40rpx;
+    background-color: #f9e6af;
+    color: #36343c;
+    font-size: 22rpx;
+    text-align: center;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 20rpx;
+}
+
+.title {
+    font-size: 22rpx;
+    margin-bottom: 28rpx;
+}
+
+.vip-card .title .iconfont {
+    color: #f6e5a3;
+    margin-right: 16rpx;
+}
+
+.vip-card .e-m {
+    font-size: 34rpx;
+    margin-top: 10rpx;
+}
+
+.vip-card .e-b {
+    font-size: 22rpx;
+    margin-top: 10rpx;
+    color: #d8cba9;
+}
+
+/* 导航 */
+.cover-container {
+    position: relative;
+    margin-top: -150rpx;
+    padding: 0 30rpx;
+    background-color: #f5f5f5;
+    padding-bottom: 20rpx;
+    color: #333;
+}
+
+.cover-container .arc {
+    position: absolute;
+    left: 0;
+    top: -34rpx;
+    width: 100%;
+    height: 36rpx;
+}
+
+.cover-container .nav-section {
+    display: flex;
+    background-color: #fff;
+    padding: 20rpx 0;
+
+}
+
+.nav-section .nav-item {
+    width: 25%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-section .nav-item .iconfont {
+    font-size: 50rpx;
+    color: #d43c33;
+    line-height: 70rpx;
+}
+
+.nav-section .nav-item text {
+    font-size: 22rpx;
+}
+
+.personalContent {
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.recentPlayContainer {
+    padding-left: 20rpx;
+}
+
+.recentPlayContainer .title {
+    font-size: 26rpx;
+    line-height: 80rpx;
+}
+.recentPlayContainer .scroll-view{
+    display: flex;
+    height: 160rpx;
+}
+.scroll-view .scrollItem {
+    margin-right: 20rpx;
+}
+.scroll-view image {
+    width: 160rpx;
+    border-radius: 20rpx;
+    height: 160rpx;
+}
+
+
+
+.personalContent .cardList {
+    margin-top: 20rpx;
+}
+
+.cardList .cardItem {
+    border-top: 1rpx solid #eee;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 10rpx;
+    font-size: 26rpx;
+
+}
+
+.cardItem .title {
+    font-size: 26rpx;
+}
+
+.cardItem .more {
+    float: right;
+}

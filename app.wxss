@@ -1,0 +1,5 @@
+/* 引入iconfont 样式库 */
+@import "/static/iconfont/iconfont.wxss";
+page {
+  height: 100%;
+}
