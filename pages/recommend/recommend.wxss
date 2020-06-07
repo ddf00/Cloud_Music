@@ -1,0 +1,83 @@
+/* 头部 */
+.recommendContainer .header {
+    width: 100%;
+    height: 300rpx;
+    position: relative;
+    color: #ffffff;
+}
+.header image {
+    width: 100%;
+    height: 100%;
+}
+
+.header .date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200rpx;
+    height: 60rpx;
+    transform: translate(-80rpx);
+    line-height: 60rpx;
+    text-align: center;
+}
+.header .date .day {
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+/* 内容区域 */
+.recommendContainer .recommendList {
+    position: relative;
+    top: -30rpx;
+    border-radius: 30rpx;
+    padding: 20rpx;
+    background-color: #fff;
+}
+.recommendList .listHeader {
+    height: 60rpx;
+}
+.listHeader .allChange {
+    float: right;
+    font-size: 26rpx;
+    color: #333;
+}
+/* 播放列表 */
+.recommendContainer .musicList {
+    height: calc(100vh - 400rpx);
+}
+
+.musicList .scrollItem {
+    display: flex;
+    margin-bottom: 20rpx;
+    position: relative;
+}
+.scrollItem image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 5rpx;
+    margin-right: 20rpx;
+}
+.scrollItem .musicInfo {
+    display: flex;
+    flex-direction: column;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+}
+.scrollItem .musicInfo text {
+    width: 400rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.scrollItem .iconfont{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+

@@ -8,7 +8,8 @@ Page({
     videoGroupList: [], //视频导航标签数据
     navId: "", // 导航的标识Id
     videoList: [],  //视频数据
-    triggered: false
+    triggered: false,
+    videoId: ''
   },
 
   /**
@@ -23,6 +24,9 @@ Page({
     //   });
     //   return
     // }
+    let cookie = wx.getStorageSync('cookie');
+    if(!cookie) wx.redirectTo({ url: '/pages/login/login'});
+    
     let videoGroupListData = await request('/video/group/list')
     let videoGroupList = videoGroupListData.data.slice(0, 15)
     this.setData({
@@ -36,7 +40,6 @@ Page({
     // 获取视频播放列表数据
     async getVideoList(navId){
       let VideoListData = await request('/video/group', {id: navId})
-      console.log(VideoListData)
       this.setData({
         videoList: VideoListData.datas,
         triggered: false
@@ -61,7 +64,17 @@ Page({
   // 视频播放, 继续播放的回调
   handlePlay(event) {
     let {id} = event.currentTarget
-    
+    // 更新videoid
+    this.setData({
+      videoId: id
+    })
+    // 创建video标签的上下文对象
+    this.videoContext = wx.createVideoContext(id)
+    // 播放视频
+    const {flag} = event.currentTarget.dataset
+    if(flag !== 'video'){
+      this.videoContext.play()
+    }
   },
 
   /**

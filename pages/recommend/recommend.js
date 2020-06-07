@@ -1,18 +1,29 @@
-// pages/recommendSong/recommendSong.js
+import request from "../../utils/request";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    recommend: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: async function (options) {
+    let musicListData = await request('/recommend/songs')
+    let recommend = musicListData.data.dailySongs
+    console.log(recommend)
+    this.setData({
+      recommend
+    })
+  },
 
+  playMusic(){
+    wx.navigateTo({
+      url: '/pages/song/song',
+    });
   },
 
   /**
