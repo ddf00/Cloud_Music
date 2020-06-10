@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/song/song",
     "pages/recommend/recommend",
+    "pages/song/song",
     "pages/video/video",
     "pages/personal/personal",
     "pages/login/login"
@@ -39,5 +39,6 @@
         "selectedIconPath": "static/images/tabs/tab-my-current.png"
       }
     ]
-  }
+  },
+  "requiredBackgroundModes": ["audio"]
 }

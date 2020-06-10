@@ -26,11 +26,13 @@
         </view>
     </scroll-view>
     <!-- 内容区域 -->
-    <scroll-view class="videoList" 
+    <scroll-view 
+    class="videoList" 
     scroll-y 
     refresher-enabled
     refresher-triggered="{{triggered}}"
     bindrefresherrefresh="handleRefresherRefresh"
+    bindscrolltolower="handleScrollToLower"
     >
         <view class="videoItem" wx:for="{{videoList}}" wx:key="vid">
             <video 
@@ -68,7 +70,6 @@
                     </button>
                 </view>
             </view>
-            <!-- <video src=""></video> -->
         </view>
     </scroll-view>
 </view>

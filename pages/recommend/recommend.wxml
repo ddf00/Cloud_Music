@@ -12,7 +12,7 @@
             <text class="allChange">全选</text>
         </view>
         <scroll-view class="musicList" scroll-y>
-            <view class="scrollItem" wx:for="{{recommend}}" wx:key="id" bindtap="playMusic">
+            <view data-id="{{item.id}}" class="scrollItem" wx:for="{{recommend}}" wx:key="id" bindtap="playMusic">
                 <image src="{{item.album.blurPicUrl}}"></image>
                 <view class="musicInfo">  
                     <text>{{item.name}}</text>

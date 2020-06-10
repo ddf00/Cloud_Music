@@ -1,9 +1,30 @@
 <view class="songContainer">
-    <view class="author">与我无关</view>
-    <view class="round"> </view>
+    <view class="author">{{song.ar[0].name}}</view>
+    <view class="round"></view>
     <image class="needle {{isPlay ? 'needleRotate' : ''}}" src="/static/images/song/needle.png"></image>
     <view class="discContainer {{isPlay ? 'discAnimation' : ''}}">
         <image class="disc" src="/static/images/song/disc.png"></image>
-        <image class="musicImg" src="/static/images/recommendSong/02.jpg"></image>
+        <image class="musicImg" src="{{song.al.picUrl}}"></image>
     </view>
+
+     <!-- 进度条控制区域 -->
+  <view class="audioControl">
+    <text>{{currentTimeFormat}}</text>
+    <view class="barControl">
+      <view class="current-time-bar" style="width:{{currentWidth}}rpx">
+        <view class="ball"></view>
+      </view>
+    </view>
+    <text>{{durationTimeFormat}}</text>
+  </view>
+
+    <view class="line"></view>
+    <view class="musicControl">
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+        <text class="iconfont icon-shangyishou" bindtap="swichSong" id="pre"></text>
+        <text class="iconfont {{isPlay?'icon-zanting': 'icon-bofang'}} big" bindtap="handlePlay"></text>
+        <text class="iconfont icon-next" bindtap="swichSong" id="next"></text>
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+    </view>
+   
 </view>
